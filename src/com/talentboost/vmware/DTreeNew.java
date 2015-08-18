@@ -113,7 +113,7 @@ public class DTreeNew {
 	 */
 	public List<String> numberToWord(String number) {
 		List<String> result = new ArrayList<String>();
-		searchWord(number, "", result, this.root);
+		searchWords(number, "", result, this.root);
 		return result;
 	}
 
@@ -147,31 +147,31 @@ public class DTreeNew {
 	 *         searching words that correspondence to particular number (with
 	 *         all digits).
 	 */
-	private void searchWord(String number, String wordSoFar, List<String> allWords, Node curNode) {
-		Node currentNode = curNode;
-
-		if (currentNode == null) {
-			return;
-		}
-
-		if (number.length() == 0) {
-			if (this.search(wordSoFar)) {
-				allWords.add(wordSoFar);
-			}
-
-		} else {
-
-			Character digit = number.charAt(0);
-			number = number.substring(1);
-
-			String children = MAP_NUM.get(digit);
-			for (int i = 0; i < children.length(); i++) {
-
-				searchWord(number, wordSoFar + currentNode.getChild(children.charAt(i)).getValue(), allWords,
-						currentNode);
-			}
-		}
-	}
+//	private void searchWord(String number, String wordSoFar, List<String> allWords, Node curNode) {
+//		Node currentNode = curNode;
+//
+//		if (currentNode == null) {
+//			return;
+//		}
+//
+//		if (number.length() == 0) {
+//			if (this.search(wordSoFar)) {
+//				allWords.add(wordSoFar);
+//			}
+//
+//		} else {
+//
+//			Character digit = number.charAt(0);
+//			number = number.substring(1);
+//
+//			String children = MAP_NUM.get(digit);
+//			for (int i = 0; i < children.length(); i++) {
+//
+//				searchWord(number, wordSoFar + currentNode.getChild(children.charAt(i)).getValue(), allWords,
+//						currentNode);
+//			}
+//		}
+//	}
 
 	/**
 	 * 
