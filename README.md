@@ -17,4 +17,7 @@ We need to make a program which is given a telephone number and returns the Engl
 
 #Additional task
 
-The mapping above allows some telephone number to be represented as English phrases too (not only one word). For example,  the telephone number 4 264 663 is equivalent to the word ***"I AM GOOD"***.
+The mapping above allows some telephone number to be represented as English phrases too (not only one word). For example:
+
+- the telephone number 4 264 663 is equivalent to the word ***"I AM GOOD"***
+- the telephone number 4 262 665 is equivalent to the word ***"I AM COOL"***
